@@ -12,6 +12,12 @@
 .header {
   @include flexCenter(space-between, row);
   height: 130px;
+  @include breakpoint("tablet") {
+    height: 100px;
+  }
+  @include breakpoint("phone") {
+    height: 70px;
+  }
   .header__logo {
     h2 {
       font-size: 48px;
@@ -21,12 +27,31 @@
     h2::first-letter {
       color: $primaryColor;
     }
+    @include breakpoint("tablet") {
+      h2 {
+        font-size: 42px;
+      }
+    }
+    @include breakpoint("phone") {
+      h2 {
+        font-size: 36px;
+      }
+    }
   }
   .header__main-nav_list {
     display: flex;
-
+    align-items: center;
     gap: 63px;
     list-style: none;
+
+    @include breakpoint("tablet") {
+      // flex-direction: column;
+      // gap: 30px;
+      display: none;
+    }
+    @include breakpoint("phone") {
+      display: none;
+    }
     .header__main-nav_link {
       list-style: none;
       text-decoration: none;
@@ -50,7 +75,44 @@
       padding-top: 3px;
       border-bottom: 2px solid $primaryColor;
     }
+    // ----------MOBILE NAV-----------
   }
+  .btn-mobile-nav {
+    // display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+
+    @include breakpoint("tablet") {
+      display: flex;
+    }
+    @include breakpoint("phone") {
+      display: flex;
+    }
+  }
+  .icon-mobile-nav {
+    height: 40px;
+    width: 40px;
+    color: #333;
+  }
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
+  // .header__main-nav {
+  //   @include breakpoint("tablet") {
+  //     background-color: rgba(255, 255, 255, 0.9);
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100vh;
+  //     z-index: 999;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //   }
+  // }
 }
 
 // --------------- HERO SECTION ---------------
@@ -60,16 +122,30 @@
   display: flex;
   align-items: center;
   height: 555.1px;
+
   .section__hero-left {
     z-index: 5;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 781px;
+    max-width: 781px;
+
     h1 {
       font-weight: 900;
       font-size: 60px;
       line-height: 70px;
+    }
+    @include breakpoint("tablet") {
+      h1 {
+        font-size: 52px;
+        line-height: 62px;
+      }
+    }
+    @include breakpoint("phone") {
+      h1 {
+        font-size: 36px;
+        line-height: 48px;
+      }
     }
     .section__hero-left_play-video {
       @include flexCenter(flex-start, row);
@@ -82,9 +158,79 @@
     position: absolute;
     right: 0;
     top: 0;
-    img {
+    @include breakpoint("tablet") {
+    }
+    .section__hero-right-img {
       width: 832.23px;
       height: 555.1px;
+      @include breakpoint("tablet") {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include breakpoint("phone") {
+      img {
+        // height: 200%;
+        // width: 200%;
+      }
+    }
+  }
+  .section__hero-right::after {
+    content: "";
+    background: $primaryColor;
+    bottom: 0;
+    right: 0;
+    height: 9px;
+    width: 50%;
+    display: block;
+    position: absolute;
+    margin-bottom: 2px;
+    @include breakpoint("tablet") {
+      left: 0;
+    }
+    @include breakpoint("phone") {
+      left: 0;
+    }
+  }
+}
+
+// --------------- BENEFITS SECTION ---------------
+
+.section__benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include breakpoint("tablet") {
+    // flex-direction: column;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  @include breakpoint("phone") {
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+
+  .section__beneftis-item {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    img {
+      width: 42.12px;
+      height: 42.12px;
+    }
+    .section__beneftis-item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      p {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+      }
     }
   }
 }
