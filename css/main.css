@@ -48,6 +48,33 @@ html body {
   }
 }
 
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  display: inline-flex;
+  gap: 10px;
+  padding: 20px 41px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #ff5300;
+  color: #fff;
+}
+.btn:hover,
+.btn:link:hover,
+.btn:visited:hover {
+  opacity: 0.8;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -263,6 +290,63 @@ html body {
   line-height: 21px;
 }
 
+.section__places {
+  display: flex;
+  gap: 75px;
+}
+.section__places .section__places-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section__places .section__places-left h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  color: #1d1b19;
+  margin-bottom: 10px;
+}
+.section__places .section__places-left p {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  opacity: 0.5;
+}
+.section__places .section__places-right {
+  display: flex;
+  gap: 21px;
+  position: relative;
+}
+.section__places .section__places-right .section__places-right-card {
+  position: relative;
+}
+.section__places .section__places-right .section__places-right-card img {
+  border-radius: 10px;
+}
+.section__places .section__places-right .section__places-right-card .section__places-right-card-inside {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.section__places .section__places-right .section__places-right-card .section__places-right-card-inside p {
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+}
+.section__places .section__places-right .slider-arrow {
+  position: absolute;
+  right: -25px;
+  top: 45%;
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1320px;
   margin: 0 auto;
@@ -295,4 +379,31 @@ html body {
   .pdbenefits {
     padding: 80px 0;
   }
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  display: inline-flex;
+  gap: 10px;
+  padding: 20px 41px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #ff5300;
+  color: #fff;
+}
+.btn:hover,
+.btn:link:hover,
+.btn:visited:hover {
+  opacity: 0.8;
 }

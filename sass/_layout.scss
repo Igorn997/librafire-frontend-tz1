@@ -58,14 +58,14 @@
       font-weight: 900;
       font-size: 20px;
       line-height: 23px;
-      color: #1d1b19;
+      color: $blackText;
       opacity: 0.5;
     }
     .header__main-nav_link:hover {
       opacity: 0.7;
     }
     .nav-active {
-      color: #1d1b19;
+      color: $blackText;
       opacity: 1;
     }
     .nav-active::after {
@@ -231,6 +231,66 @@
         font-size: 18px;
         line-height: 21px;
       }
+    }
+  }
+}
+
+// --------------- PLACES SECTION ---------------
+.section__places {
+  display: flex;
+  gap: 75px;
+
+  .section__places-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h2 {
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      display: flex;
+      align-items: center;
+      color: $blackText;
+      margin-bottom: 10px;
+    }
+    p {
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      opacity: 0.5;
+    }
+  }
+  .section__places-right {
+    display: flex;
+    gap: 21px;
+    position: relative;
+    .section__places-right-card {
+      position: relative;
+      img {
+        border-radius: 10px;
+      }
+      .section__places-right-card-inside {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        p {
+          font-weight: 900;
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+    .slider-arrow {
+      position: absolute;
+      right: -25px;
+      top: 45%;
+      cursor: pointer;
     }
   }
 }

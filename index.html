@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
+    <!-- ikonice -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -22,6 +22,11 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script defer="" src="js/script.js"></script>
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
   </head>
   <body>
     <header class="header wrapper">
@@ -69,27 +74,94 @@
           </div>
         </div>
         <div class="section__beneftis-item">
-          <img src="img/icons/planet-icon.svg" alt="car icon" />
+          <img src="img/icons/planet-icon.svg" alt="planet icon" />
           <div class="section__beneftis-item-text">
             <p class="highlited-text">55+</p>
             <p>Countries</p>
           </div>
         </div>
         <div class="section__beneftis-item">
-          <img src="img/icons/money-icon.svg" alt="car icon" />
+          <img src="img/icons/money-icon.svg" alt="money icon" />
           <div class="section__beneftis-item-text">
             <p class="highlited-text">Best Price</p>
             <p>Guaranteed</p>
           </div>
         </div>
         <div class="section__beneftis-item">
-          <img src="img/icons/people-icon.svg" alt="car icon" />
+          <img src="img/icons/people-icon.svg" alt="people icon" />
           <div class="section__beneftis-item-text">
             <p class="highlited-text">84 Million+</p>
             <p>User per year</p>
           </div>
         </div>
       </section>
+      <section class="section__places wrapper">
+        <div class="section__places-left">
+          <h2>Find The Perfect Place</h2>
+          <p>
+            A list of the top 75 Best Tourist Places to See in world for a
+            perfect holiday or a trip.
+          </p>
+          <!-- <button class="btn">View More</button> -->
+          <div>
+            <a href="#" class="btn">View More</a>
+          </div>
+        </div>
+        <div class="section__places-right">
+          <div class="section__places-right-card">
+            <img src="./img/slider/slider1.jpg" alt="Bangalore" />
+            <div class="section__places-right-card-inside">
+              <p>Bangalore</p>
+              <img src="img/icons/stars-icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="section__places-right-card">
+            <img src="./img/slider/slider2.jpg" alt="Bangalore" />
+            <div class="section__places-right-card-inside">
+              <p>Coorg</p>
+              <img src="img/icons/stars-icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="section__places-right-card">
+            <img src="./img/slider/slider3.jpg" alt="Bangalore" />
+            <div class="section__places-right-card-inside">
+              <p>Island</p>
+              <img src="img/icons/stars-icon.svg" alt="" />
+            </div>
+          </div>
+
+          <img class="slider-arrow" src="img/icons/arrow-slider.svg" alt="" />
+        </div>
+      </section>
+
+      <!-- <div class="section__slider wrapper">
+        <div class="multiple-items">
+          <div class="section__places-right-card">
+            <img src="./img/slider/slider1.jpg" alt="Bangalore" />
+          </div>
+          <div class="section__places-right-card">
+            <img src="./img/slider/slider2.jpg" alt="Coorg" />
+          </div>
+          <div class="section__places-right-card">
+            <img src="./img/slider/slider3.jpg" alt="Island" />
+          </div>
+        </div>
+      </div> -->
     </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(".single-item").slick();
+
+      $(".multiple-items").slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      });
+    </script>
   </body>
 </html>
