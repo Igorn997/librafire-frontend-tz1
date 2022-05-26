@@ -218,6 +218,7 @@
   @include breakpoint("phone") {
     flex-wrap: wrap;
     gap: 100px;
+    flex-direction: column;
   }
 
   .section__beneftis-item {
@@ -364,22 +365,31 @@
 // --------------- NEAR YOU SECTION ---------------
 
 .section__nearyou {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
   .h2 {
     display: flex;
     justify-content: center;
-    margin-bottom: 90px;
+    // margin-bottom: 90px;
   }
   .section__nearyou-items {
     display: flex;
-    gap: 100px;
-    margin-bottom: 90px;
+    justify-content: center;
+
     @include breakpoint("tablet") {
+      flex-direction: column;
+      gap: 30px;
+    }
+    @include breakpoint("phone") {
       flex-wrap: wrap;
       justify-content: center;
+      gap: 30px;
     }
     .section__nearyou-item {
       display: flex;
       align-items: center;
+      width: 316.72px;
       gap: 33px;
       .section__nearyou-item_imgbox {
         width: 117.93px;
@@ -397,6 +407,16 @@
           font-size: 20px;
         }
       }
+    }
+  }
+}
+
+// --------------- GALERY SECTION ---------------
+
+.section__galery {
+  .section__galery-items {
+    .section__galery-item {
+      border-radius: 10px;
     }
   }
 }
