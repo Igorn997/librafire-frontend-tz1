@@ -6,6 +6,7 @@ const { watch, series } = require("gulp");
 var uglifycss = require("gulp-uglifycss");
 var uglify = require("gulp-uglify");
 var pipeline = require("readable-stream").pipeline;
+// import imagemin from "gulp-imagemin";
 
 function buildStyles() {
   return gulp
@@ -30,6 +31,9 @@ gulp.task("css", async function () {
 gulp.task("compress", function () {
   return pipeline(gulp.src("./js/*.js"), uglify(), gulp.dest("dist"));
 });
+
+// export default () =>
+//   gulp.src("./img/*").pipe(imagemin()).pipe(gulp.dest("dist/images"));
 
 exports.default = function () {
   // You can use a single task

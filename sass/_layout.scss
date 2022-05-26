@@ -152,6 +152,12 @@
       gap: 15px;
       font-weight: 900;
       font-size: 18px;
+      img {
+        cursor: pointer;
+      }
+      p {
+        cursor: pointer;
+      }
     }
   }
   .section__hero-right {
@@ -239,21 +245,17 @@
 .section__places {
   display: flex;
   gap: 75px;
-
+  @include breakpoint("tablet") {
+    flex-direction: column;
+  }
+  @include breakpoint("phone") {
+    flex-direction: column;
+  }
   .section__places-left {
     display: flex;
     flex-direction: column;
     gap: 30px;
 
-    h2 {
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 56px;
-      display: flex;
-      align-items: center;
-      color: $blackText;
-      margin-bottom: 10px;
-    }
     p {
       font-weight: 900;
       font-size: 20px;
@@ -263,34 +265,138 @@
     }
   }
   .section__places-right {
-    display: flex;
-    gap: 21px;
-    position: relative;
-    .section__places-right-card {
-      position: relative;
-      img {
+    .section__places-right-cards {
+      display: flex;
+      gap: 20px;
+
+      // @include breakpoint("phone") {
+      //   flex-direction: column;
+      //   align-items: center;
+      // }
+      .section__places-right_card {
+        width: 250.18px;
+        height: 336.94px;
         border-radius: 10px;
-      }
-      .section__places-right-card-inside {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 30px;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        p {
-          font-weight: 900;
-          font-size: 18px;
-          color: #fff;
+        // overflow: hidden;
+        position: relative;
+        .section__place-right_card-img {
+          object-fit: cover;
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+        }
+        .section__place-right_card-text {
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding-bottom: 20px;
+          padding-left: 20px;
+          h2 {
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 21px;
+            color: #fff;
+          }
+          img {
+            margin-left: -2px;
+          }
         }
       }
     }
-    .slider-arrow {
-      position: absolute;
-      right: -25px;
-      top: 45%;
-      cursor: pointer;
+  }
+}
+
+// --------------- TOP RATED SECTION ---------------
+
+.section__toprated {
+  .h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 63px;
+  }
+  .section__toprated-cards {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    @include breakpoint("tablet") {
+      flex-wrap: wrap;
+    }
+    @include breakpoint("phone") {
+      flex-wrap: wrap;
+    }
+    .section__toprated-card {
+      width: 252.7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.4s;
+      h3 {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 16px 0;
+      }
+      .section__toprated-card_img {
+        border-radius: 10px;
+      }
+      p {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        color: #ffd4bf;
+        margin-bottom: 6px;
+      }
+      .section__toprated-card_stars {
+        width: 83.28px;
+        height: 12px;
+        margin-left: -2px;
+      }
+    }
+  }
+  .section__toprated-card:hover {
+    transform: translatey(-1.2rem);
+  }
+}
+
+// --------------- NEAR YOU SECTION ---------------
+
+.section__nearyou {
+  .h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+  .section__nearyou-items {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 90px;
+    @include breakpoint("tablet") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .section__nearyou-item {
+      display: flex;
+      align-items: center;
+      gap: 33px;
+      .section__nearyou-item_imgbox {
+        width: 117.93px;
+        height: 76.63px;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .section__nearyou-item_textbox {
+        h3 {
+          font-weight: 900;
+          font-size: 20px;
+        }
+      }
     }
   }
 }
