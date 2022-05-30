@@ -19,7 +19,8 @@ html body {
 }
 
 .wrapper {
-  max-width: 1320px;
+  max-width: 1340px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -65,7 +66,7 @@ html body {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .pdbenefits {
-    padding: 100px 0;
+    padding: 100px 70px;
   }
 }
 @media only screen and (min-width: 120px) and (max-width: 767px) {
@@ -76,6 +77,11 @@ html body {
 
 .pdtoprated {
   padding: 110px 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .pdtoprated {
+    padding: 100px 70px;
+  }
 }
 
 .btn,
@@ -204,67 +210,45 @@ html body {
   display: none;
 }
 
-.section__hero {
-  position: relative;
+.section__hero .section__hero-container {
   display: flex;
-  align-items: center;
-  height: 555.1px;
 }
-.section__hero .section__hero-left {
-  z-index: 5;
+.section__hero .section__hero-container .section__hero-left {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 781px;
+  justify-content: center;
+  flex: 0 0 40%;
+  max-width: 40%;
+  z-index: 999;
 }
-.section__hero .section__hero-left h1 {
+.section__hero .section__hero-container .section__hero-left h1 {
   font-weight: 900;
   font-size: 60px;
   line-height: 70px;
+  margin-bottom: 30px;
+  width: 150%;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .section__hero .section__hero-left h1 {
-    font-size: 52px;
-    line-height: 62px;
-  }
-}
-@media only screen and (min-width: 120px) and (max-width: 767px) {
-  .section__hero .section__hero-left h1 {
-    font-size: 36px;
-    line-height: 48px;
-  }
-}
-.section__hero .section__hero-left .section__hero-left_play-video {
+.section__hero .section__hero-container .section__hero-left .section__hero-left_play-video {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 15px;
+  gap: 14px;
+}
+.section__hero .section__hero-container .section__hero-left .section__hero-left_play-video p {
   font-weight: 900;
   font-size: 18px;
+  line-height: 21px;
+  color: #1d1b19;
 }
-.section__hero .section__hero-left .section__hero-left_play-video img {
-  cursor: pointer;
+.section__hero .section__hero-container .section__hero-right {
+  flex-direction: 0 0 60%;
+  max-width: 60%;
+  position: relative;
 }
-.section__hero .section__hero-left .section__hero-left_play-video p {
-  cursor: pointer;
+.section__hero .section__hero-container .section__hero-right .section__hero-right-img {
+  width: 100%;
+  z-index: 1;
 }
-.section__hero .section__hero-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.section__hero .section__hero-right .section__hero-right-img {
-  width: 832.23px;
-  height: 555.1px;
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .section__hero .section__hero-right .section__hero-right-img {
-    width: 100%;
-    height: 100%;
-  }
-}
-.section__hero .section__hero-right::after {
+.section__hero .section__hero-container .section__hero-right::after {
   content: "";
   background: #ff5300;
   bottom: 0;
@@ -274,16 +258,6 @@ html body {
   display: block;
   position: absolute;
   margin-bottom: 2px;
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .section__hero .section__hero-right::after {
-    left: 0;
-  }
-}
-@media only screen and (min-width: 120px) and (max-width: 767px) {
-  .section__hero .section__hero-right::after {
-    left: 0;
-  }
 }
 
 .section__benefits {
@@ -352,6 +326,14 @@ html body {
   line-height: 23px;
   color: #000000;
   opacity: 0.5;
+}
+.section__places .section__places-right {
+  position: relative;
+}
+.section__places .section__places-right .next {
+  position: absolute;
+  right: -18px;
+  top: 142px;
 }
 .section__places .section__places-right .section__places-right-cards {
   display: flex;
@@ -482,14 +464,235 @@ html body {
 .section__nearyou .section__nearyou-items .section__nearyou-item .section__nearyou-item_imgbox img {
   object-fit: cover;
   object-position: center;
+  width: 100%;
+  height: 100%;
 }
 .section__nearyou .section__nearyou-items .section__nearyou-item .section__nearyou-item_textbox h3 {
   font-weight: 900;
   font-size: 20px;
 }
 
-.section__galery .section__galery-items .section__galery-item {
+.section__galery .h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+.section__galery .section__galery-items .section__galery-item1 {
   border-radius: 10px;
+  height: 468.34px;
+  width: 657.03px;
+}
+.section__galery .section__galery-items .section__galery-item1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.latest-travel {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .latest-travel {
+    flex-direction: column;
+  }
+}
+.latest-travel .latest-travel-left {
+  align-items: center;
+  display: flex;
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .latest-travel .latest-travel-left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.latest-travel .latest-travel-left .latest-travel-left-col3 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.latest-travel .latest-travel-left .latest-travel-left-col3 .latest-travel-left-col3-left {
+  width: 100%;
+  height: 336.94px;
+  border-radius: 10px 0 0 10px;
+  background: url(/img/man-hike-with-large-backpack-travels-forest.png);
+  background-position: center;
+  background-size: cover;
+}
+.latest-travel .latest-travel-left .latest-travel-left-col3 .latest-travel-left-col3-middle {
+  width: 100%;
+  height: 406.57px;
+  border-radius: 10px;
+  background: url(/img/rock-mountains-with-desert-background-nature-landscapee.png);
+  background-position: center;
+  background-size: cover;
+}
+.latest-travel .latest-travel-left .latest-travel-left-col3 .latest-travel-left-col3-right {
+  width: 100%;
+  height: 336.94px;
+  border-radius: 0 10px 10px 0;
+  background: url(/img/hikers-top.png);
+  background-position: center;
+  background-size: cover;
+}
+.latest-travel .latest-travel-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding-left: 65px;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .latest-travel .latest-travel-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.latest-travel .latest-travel-right p {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+.ourpartners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ourpartners .ourpartners-heading-wrapper {
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 63px;
+  justify-content: center;
+}
+.ourpartners .ourpartners-4col {
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ourpartners .ourpartners-4col {
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+}
+.ourpartners .ourpartners-4col .ourpartners-4col-content {
+  display: flex;
+  align-items: center;
+}
+.ourpartners .ourpartners-4col .ourpartners-4col-content .ourpartners-4col-content-img {
+  background-size: cover;
+  background-position: center;
+  width: 117.93px;
+  height: 76.63px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ourpartners .ourpartners-4col .ourpartners-4col-content .ourpartners-4col-content-img img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+.ourpartners .ourpartners-4col .ourpartners-4col-content .ourpartners-4col-content-text {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #1d1b19;
+  padding-left: 33px;
+}
+
+.footer .footer-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  gap: 50px;
+}
+.footer .footer-container .footer-col1 {
+  flex: 0 0 40%;
+  max-width: 35%;
+  flex-wrap: wrap;
+  padding-right: 30px;
+}
+.footer .footer-container .footer-col1 .footer-logo {
+  margin-bottom: 10px;
+}
+.footer .footer-container .footer-col1 .footer-logo h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 56px;
+}
+.footer .footer-container .footer-col1 .footer-logo h2::first-letter {
+  color: #ff5300;
+}
+.footer .footer-container .footer-col1 .footer-col1-text {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c6c6c6;
+  padding-bottom: 15px;
+}
+.footer .footer-container .footer-col1 .footer-col1-social .footer-col1-social-item {
+  margin-right: 25px;
+  width: 18.01px;
+  height: 18.04px;
+}
+.footer .footer-container .footer-col2 {
+  flex: 0 0 20%;
+  max-width: 21.666%;
+  flex-wrap: wrap;
+}
+.footer .footer-container .footer-col2 .footer-col2-link {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 14px;
+}
+.footer .footer-container .footer-col2 .foot-col2-list li {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 7px;
+}
+.footer .footer-container .footer-col2 .foot-col2-list li .foot-col2-list-link:link,
+.footer .footer-container .footer-col2 .foot-col2-list li .foot-col2-list-link:visited {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c6c6c6;
+}
+
+.contact-list li {
+  list-style: none;
+  margin-bottom: 7px;
+}
+.contact-list li .contact-list-link:link,
+.contact-list li .contact-list-link:visited {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #c6c6c6;
+  margin-left: 10px;
+}
+
+.slick-slider {
+  width: 800px;
 }
 
 .slick-slide {
@@ -497,7 +700,8 @@ html body {
 }
 
 .wrapper {
-  max-width: 1320px;
+  max-width: 1340px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -543,7 +747,7 @@ html body {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .pdbenefits {
-    padding: 100px 0;
+    padding: 100px 70px;
   }
 }
 @media only screen and (min-width: 120px) and (max-width: 767px) {
@@ -554,6 +758,11 @@ html body {
 
 .pdtoprated {
   padding: 110px 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .pdtoprated {
+    padding: 100px 70px;
+  }
 }
 
 .btn,

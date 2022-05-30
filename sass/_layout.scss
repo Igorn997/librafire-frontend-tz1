@@ -117,86 +117,138 @@
 
 // --------------- HERO SECTION ---------------
 
+// .section__hero {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   height: 555.1px;
+
+//   .section__hero-left {
+//     z-index: 5;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 30px;
+//     max-width: 781px;
+
+//     h1 {
+//       font-weight: 900;
+//       font-size: 60px;
+//       line-height: 70px;
+//     }
+//     @include breakpoint("tablet") {
+//       h1 {
+//         font-size: 52px;
+//         line-height: 62px;
+//       }
+//     }
+//     @include breakpoint("phone") {
+//       h1 {
+//         font-size: 36px;
+//         line-height: 48px;
+//       }
+//     }
+//     .section__hero-left_play-video {
+//       @include flexCenter(flex-start, row);
+//       gap: 15px;
+//       font-weight: 900;
+//       font-size: 18px;
+//       img {
+//         cursor: pointer;
+//       }
+//       p {
+//         cursor: pointer;
+//       }
+//     }
+//   }
+//   .section__hero-right {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     @include breakpoint("tablet") {
+//     }
+//     .section__hero-right-img {
+//       width: 832.23px;
+//       height: 555.1px;
+//       @include breakpoint("tablet") {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+
+//     @include breakpoint("phone") {
+//       img {
+//         // height: 200%;
+//         // width: 200%;
+//       }
+//     }
+//   }
+//   .section__hero-right::after {
+//     content: "";
+//     background: $primaryColor;
+//     bottom: 0;
+//     right: 0;
+//     height: 9px;
+//     width: 50%;
+//     display: block;
+//     position: absolute;
+//     margin-bottom: 2px;
+//     @include breakpoint("tablet") {
+//       left: 0;
+//     }
+//     @include breakpoint("phone") {
+//       left: 0;
+//     }
+//   }
+// }
+
 .section__hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 555.1px;
-
-  .section__hero-left {
-    z-index: 5;
+  .section__hero-container {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 781px;
-
-    h1 {
-      font-weight: 900;
-      font-size: 60px;
-      line-height: 70px;
-    }
-    @include breakpoint("tablet") {
+    .section__hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 0 40%;
+      max-width: 40%;
+      z-index: 999;
       h1 {
-        font-size: 52px;
-        line-height: 62px;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 30px;
+        width: 150%;
+      }
+      .section__hero-left_play-video {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        p {
+          font-weight: 900;
+          font-size: 18px;
+          line-height: 21px;
+          color: $blackText;
+        }
       }
     }
-    @include breakpoint("phone") {
-      h1 {
-        font-size: 36px;
-        line-height: 48px;
-      }
-    }
-    .section__hero-left_play-video {
-      @include flexCenter(flex-start, row);
-      gap: 15px;
-      font-weight: 900;
-      font-size: 18px;
-      img {
-        cursor: pointer;
-      }
-      p {
-        cursor: pointer;
-      }
-    }
-  }
-  .section__hero-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    @include breakpoint("tablet") {
-    }
-    .section__hero-right-img {
-      width: 832.23px;
-      height: 555.1px;
-      @include breakpoint("tablet") {
+    .section__hero-right {
+      flex-direction: 0 0 60%;
+      max-width: 60%;
+      position: relative;
+      .section__hero-right-img {
         width: 100%;
-        height: 100%;
+        z-index: 1;
       }
     }
-
-    @include breakpoint("phone") {
-      img {
-        // height: 200%;
-        // width: 200%;
-      }
-    }
-  }
-  .section__hero-right::after {
-    content: "";
-    background: $primaryColor;
-    bottom: 0;
-    right: 0;
-    height: 9px;
-    width: 50%;
-    display: block;
-    position: absolute;
-    margin-bottom: 2px;
-    @include breakpoint("tablet") {
-      left: 0;
-    }
-    @include breakpoint("phone") {
-      left: 0;
+    .section__hero-right::after {
+      content: "";
+      background: $primaryColor;
+      bottom: 0;
+      right: 0;
+      height: 9px;
+      width: 50%;
+      display: block;
+      position: absolute;
+      margin-bottom: 2px;
     }
   }
 }
@@ -266,10 +318,15 @@
     }
   }
   .section__places-right {
+    position: relative;
+    .next {
+      position: absolute;
+      right: -18px;
+      top: 142px;
+    }
     .section__places-right-cards {
       display: flex;
       gap: 20px;
-
       // @include breakpoint("phone") {
       //   flex-direction: column;
       //   align-items: center;
@@ -399,6 +456,8 @@
         img {
           object-fit: cover;
           object-position: center;
+          width: 100%;
+          height: 100%;
         }
       }
       .section__nearyou-item_textbox {
@@ -414,9 +473,244 @@
 // --------------- GALERY SECTION ---------------
 
 .section__galery {
+  .h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
   .section__galery-items {
-    .section__galery-item {
+    .section__galery-item1 {
       border-radius: 10px;
+      height: 468.34px;
+      width: 657.03px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
     }
   }
 }
+
+// --------------- LATEST TRAVEL SECTION ---------------
+
+.latest-travel {
+  @include breakpoint("tablet") {
+    flex-direction: column;
+    // align-items: center;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  .latest-travel-left {
+    align-items: center;
+    display: flex;
+    flex: 0 0 60%;
+    max-width: 60%;
+    @include breakpoint("tablet") {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    .latest-travel-left-col3 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+      .latest-travel-left-col3-left {
+        width: 100%;
+        height: 336.94px;
+        border-radius: 10px 0 0 10px;
+        background: url(/img/man-hike-with-large-backpack-travels-forest.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .latest-travel-left-col3-middle {
+        width: 100%;
+        height: 406.57px;
+        border-radius: 10px;
+        background: url(/img/rock-mountains-with-desert-background-nature-landscapee.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .latest-travel-left-col3-right {
+        width: 100%;
+        height: 336.94px;
+        border-radius: 0 10px 10px 0;
+        background: url(/img/hikers-top.png);
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  .latest-travel-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 65px;
+    margin-bottom: 30px;
+    @include breakpoint("tablet") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    p {
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      opacity: 0.5;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// --------------- OUR PARTNERS SECTION ---------------
+
+.ourpartners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  .ourpartners-heading-wrapper {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 63px;
+    justify-content: center;
+  }
+
+  .ourpartners-4col {
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    // justify-content: center;
+    @include breakpoint("tablet") {
+      display: flex;
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 20px;
+    }
+    .ourpartners-4col-content {
+      display: flex;
+      align-items: center;
+      .ourpartners-4col-content-img {
+        background-size: cover;
+        background-position: center;
+        width: 117.93px;
+        height: 76.63px;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          object-position: center;
+          height: 100%;
+        }
+      }
+      .ourpartners-4col-content-text {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        color: $blackText;
+        padding-left: 33px;
+      }
+    }
+  }
+}
+
+// --------------- FOOTER SECTION ---------------
+
+.footer {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    gap: 50px;
+    .footer-col1 {
+      flex: 0 0 40%;
+      max-width: 35%;
+      flex-wrap: wrap;
+      padding-right: 30px;
+      .footer-logo {
+        margin-bottom: 10px;
+        h2 {
+          font-size: 48px;
+          font-weight: 900;
+          line-height: 56px;
+        }
+        h2::first-letter {
+          color: $primaryColor;
+        }
+      }
+      .footer-col1-text {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        color: #c6c6c6;
+        padding-bottom: 15px;
+      }
+      .footer-col1-social {
+        .footer-col1-social-item {
+          margin-right: 25px;
+          width: 18.01px;
+          height: 18.04px;
+        }
+      }
+    }
+    .footer-col2 {
+      flex: 0 0 20%;
+      max-width: 21.666%;
+      flex-wrap: wrap;
+      // padding-left: 30px;
+      .footer-col2-link {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 14px;
+      }
+      .foot-col2-list {
+        li {
+          list-style: none;
+          text-decoration: none;
+          margin-bottom: 7px;
+          .foot-col2-list-link:link,
+          .foot-col2-list-link:visited {
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 21px;
+            color: #c6c6c6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-list {
+  li {
+    list-style: none;
+    margin-bottom: 7px;
+    .contact-list-link:link,
+    .contact-list-link:visited {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 21px;
+      color: #c6c6c6;
+      margin-left: 10px;
+    }
+  }
+}
+
+.slick-slider {
+  width: 800px;
+}
+
+// .next {
+//   // transform: translate(50%, -50%);
+//   position: absolute;
+//   right: 0;
+// }

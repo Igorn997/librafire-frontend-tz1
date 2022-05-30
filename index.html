@@ -21,7 +21,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script defer="" src="js/script.js"></script>
+
     <!-- Slick Slider -->
     <link
       rel="stylesheet"
@@ -50,19 +50,21 @@
     </header>
     <main>
       <section class="section__hero wrapper">
-        <div class="section__hero-left">
-          <h1>Its Time For New Adventures,Escapes thrills & experiences</h1>
-          <div class="section__hero-left_play-video">
-            <img src="img/icons/play-icon.png" alt="Play icon" />
-            <p>Play Video</p>
+        <div class="section__hero-container">
+          <div class="section__hero-left">
+            <h1>Its Time For New Adventures,Escapes thrills & experiences</h1>
+            <div class="section__hero-left_play-video">
+              <img src="img/icons/play-icon.png" alt="Play icon" />
+              <p>Play Video</p>
+            </div>
           </div>
-        </div>
-        <div class="section__hero-right">
-          <img
-            class="section__hero-right-img"
-            src="img/hero-sectin-img.png"
-            alt="Hero Img"
-          />
+          <div class="section__hero-right">
+            <img
+              class="section__hero-right-img"
+              src="img/hero-sectin-img.png"
+              alt="Hero Img"
+            />
+          </div>
         </div>
       </section>
       <section class="section__benefits wrapper pdbenefits">
@@ -108,7 +110,7 @@
           </div>
         </div>
         <div class="section__places-right">
-          <div class="section__places-right-cards">
+          <div class="section__places-right-cards center">
             <div class="section__places-right_card">
               <img
                 src="img/slider/slider1.jpg"
@@ -142,7 +144,23 @@
                 <img src="img/icons/stars-icon.svg" alt="star icons" />
               </div>
             </div>
+            <div class="section__places-right_card">
+              <img
+                src="img/slider/slider3.jpg"
+                alt="Slider 3"
+                class="section__place-right_card-img"
+              />
+              <div class="section__place-right_card-text">
+                <h2>Island</h2>
+                <img src="img/icons/stars-icon.svg" alt="star icons" />
+              </div>
+            </div>
           </div>
+          <img
+            src="img/icons/arrow-slider.svg"
+            alt="slider arrow"
+            class="next"
+          />
         </div>
       </section>
       <section class="section__toprated wrapper pdtoprated">
@@ -309,48 +327,179 @@
           </div>
         </div>
       </section>
-      <section class="section__galery wrapper">
+      <!-- <section class="section__galery wrapper">
+        <h2 class="h2">Best Places on Earth</h2>
         <div class="section__galery-items">
-          <div class="section__galery-item"></div>
+          <div class="section__galery-item1">
+            <img src="img/baloons.jpg" alt="Baloons" />
+          </div>
+        </div>
+      </section> -->
+      <section class="latest-travel wrapper pdtoprated">
+        <div class="latest-travel-left">
+          <div class="latest-travel-left-col3">
+            <div class="latest-travel-left-col3-left"></div>
+          </div>
+          <div class="latest-travel-left-col3">
+            <div class="latest-travel-left-col3-middle"></div>
+          </div>
+          <div class="latest-travel-left-col3">
+            <div class="latest-travel-left-col3-right"></div>
+          </div>
+        </div>
+        <div class="latest-travel-right">
+          <h2 class="h2">Latest Travel Trends</h2>
+          <p>
+            There are real opportunities for companies that keep pace with the
+            latest travel trends and embrace new ways of doing business.
+          </p>
+          <div>
+            <a href="#" class="btn">View More</a>
+          </div>
         </div>
       </section>
+      <div class="ourpartners wrapper">
+        <div class="ourpartners-heading-wrapper">
+          <h2 class="h2">Our Partners</h2>
+        </div>
+        <div class="ourpartners-4col">
+          <div class="ourpartners-4col-content">
+            <div class="ourpartners-4col-content-img">
+              <img
+                src="img/all-is-fine-positive-cute-african-american-woman-makes-okay-gesture-gives-approval-agrees-with-something-wears-casual-sweater-says-yes-new-opportunities-being-pleased-with-new-concept.png"
+                alt="ALt text"
+              />
+            </div>
+            <p class="ourpartners-4col-content-text">Lara Nosworthy</p>
+          </div>
+        </div>
+        <div class="ourpartners-4col">
+          <div class="ourpartners-4col-content">
+            <div class="ourpartners-4col-content-img">
+              <img
+                src="img/wellbeing-lifestyle-people-concept-attractive-friendly-looking-smiling-redhead-young-girl-straight-long-natural-ginger-hair-wearing-glasses-laughing-happily-enjoy-nice-relaxing-cafe-atmosphere.png"
+                alt="ALt text"
+              />
+            </div>
+            <p class="ourpartners-4col-content-text">Alana Baldessin</p>
+          </div>
+        </div>
+        <div class="ourpartners-4col">
+          <div class="ourpartners-4col-content">
+            <div class="ourpartners-4col-content-img">
+              <img
+                src="img/woman-taking-off-mask-new-normal.png"
+                alt="ALt text"
+              />
+            </div>
+            <p class="ourpartners-4col-content-text">Emma Fritzsche</p>
+          </div>
+        </div>
+        <div class="ourpartners-4col">
+          <div class="ourpartners-4col-content">
+            <div class="ourpartners-4col-content-img">
+              <img
+                src="img/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing.png"
+                alt="ALt text"
+              />
+            </div>
+            <p class="ourpartners-4col-content-text">Joel Lynas</p>
+          </div>
+        </div>
+      </div>
     </main>
-
+    <footer class="footer wrapper">
+      <div class="footer-container">
+        <div class="footer-col1">
+          <div class="footer-logo">
+            <h2>Tvelia</h2>
+          </div>
+          <p class="footer-col1-text">
+            An adventure is an exciting experience that is typically bold,
+            sometimes risky or undertaking. Adventures may be activities with
+            some potential for physical danger such as traveling, exploring,
+            skydiving, mountain climbing, scuba diving, river rafting or
+            participating in extreme sports.
+          </p>
+          <div class="footer-col1-social">
+            <img
+              src="img/icons/fb-icon.svg"
+              alt="Social"
+              class="footer-col1-social-item"
+            />
+            <img
+              src="img/icons/google-icon.svg"
+              alt="Social"
+              class="footer-col1-social-item"
+            />
+            <img
+              src="img/icons/twiter-icon.svg"
+              alt="Social"
+              class="footer-col1-social-item"
+            />
+            <img
+              src="img/icons/insta-icon.svg"
+              alt="Social"
+              class="footer-col1-social-item"
+            />
+          </div>
+        </div>
+        <div class="footer-col2">
+          <div class="footer-col2-link">Useful Links</div>
+          <ul class="foot-col2-list">
+            <li><a class="foot-col2-list-link" href="#">Home</a></li>
+            <li><a class="foot-col2-list-link" href="#">About</a></li>
+            <li><a class="foot-col2-list-link" href="#">Adventures</a></li>
+            <li><a class="foot-col2-list-link" href="#">Contact</a></li>
+            <li><a class="foot-col2-list-link" href="#">Login</a></li>
+            <li><a class="foot-col2-list-link" href="#">Signup</a></li>
+          </ul>
+        </div>
+        <div class="footer-col2">
+          <div class="footer-col2-link">Support Links</div>
+          <ul class="foot-col2-list">
+            <li><a class="foot-col2-list-link" href="#">Home</a></li>
+            <li><a class="foot-col2-list-link" href="#">About</a></li>
+            <li><a class="foot-col2-list-link" href="#">Adventures</a></li>
+            <li><a class="foot-col2-list-link" href="#">Contact</a></li>
+            <li><a class="foot-col2-list-link" href="#">Login</a></li>
+            <li><a class="foot-col2-list-link" href="#">Signup</a></li>
+          </ul>
+        </div>
+        <div class="footer-col2">
+          <div class="footer-col2-link">Newsletter Subscription</div>
+          <ul class="contact-list">
+            <li>
+              <img src="img/icons/footer-arrow-icon.svg" alt="footer arrow" /><a
+                href="#"
+                class="contact-list-link"
+                >569 bangalore Auroville Beach, 560001</a
+              >
+            </li>
+            <li>
+              <img src="img/icons/footer-mail-icon.svg" alt="footer arrow" /><a
+                href="#"
+                class="contact-list-link"
+                >Redliodesigns@gmail.com</a
+              >
+            </li>
+            <li>
+              <img src="img/icons/footer-phone-icon.svg" alt="footer arrow" /><a
+                href="#"
+                class="contact-list-link"
+                >5659875689</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      $(".single-item").slick();
-
-      $(".center").slick({
-        centerMode: true,
-        centerPadding: "60px",
-        slidesToShow: 2,
-        arrows: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: "40px",
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: "40px",
-              slidesToShow: 1,
-            },
-          },
-        ],
-      });
-    </script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

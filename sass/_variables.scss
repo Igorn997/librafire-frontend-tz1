@@ -6,7 +6,8 @@ $blackText: #1d1b19;
 }
 
 .wrapper {
-  max-width: 1320px;
+  max-width: 1340px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 10px;
   @include breakpoint("tablet") {
@@ -44,7 +45,7 @@ $blackText: #1d1b19;
   // padding-top: 165px;
   // padding-bottom: 165px;
   @include breakpoint("tablet") {
-    padding: 100px 0;
+    padding: 100px 70px;
   }
   @include breakpoint("phone") {
     padding: 80px 0;
@@ -53,6 +54,9 @@ $blackText: #1d1b19;
 
 .pdtoprated {
   padding: 110px 0;
+  @include breakpoint("tablet") {
+    padding: 100px 70px;
+  }
 }
 
 .btn,
