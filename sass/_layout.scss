@@ -204,6 +204,12 @@
 .section__hero {
   .section__hero-container {
     display: flex;
+    @include breakpoint("tablet") {
+      flex-direction: column;
+    }
+    @include breakpoint("phone") {
+      flex-direction: column;
+    }
     .section__hero-left {
       display: flex;
       flex-direction: column;
@@ -211,22 +217,50 @@
       flex: 0 0 40%;
       max-width: 40%;
       z-index: 999;
+      @include breakpoint("tablet") {
+        // flex: 0 0 100%;
+        // max-width: 100%;
+        display: flex;
+        max-width: 70%;
+      }
+      @include breakpoint("phone") {
+        display: flex;
+        max-width: 70%;
+      }
       h1 {
         font-weight: 900;
         font-size: 60px;
         line-height: 70px;
         margin-bottom: 30px;
         width: 150%;
+        @include breakpoint("tablet") {
+          font-size: 48px;
+          line-height: 60px;
+        }
+        @include breakpoint("phone") {
+          font-size: 32px;
+          line-height: 40px;
+        }
       }
       .section__hero-left_play-video {
         display: flex;
         align-items: center;
         gap: 14px;
+        @include breakpoint("tablet") {
+          margin-bottom: 30px;
+        }
+        @include breakpoint("phone") {
+          margin-bottom: 20px;
+        }
+        img {
+          cursor: pointer;
+        }
         p {
           font-weight: 900;
           font-size: 18px;
           line-height: 21px;
           color: $blackText;
+          cursor: pointer;
         }
       }
     }
@@ -234,6 +268,14 @@
       flex-direction: 0 0 60%;
       max-width: 60%;
       position: relative;
+      @include breakpoint("tablet") {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      @include breakpoint("phone") {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
       .section__hero-right-img {
         width: 100%;
         z-index: 1;
@@ -256,39 +298,49 @@
 // --------------- BENEFITS SECTION ---------------
 
 .section__benefits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  @include breakpoint("tablet") {
-    // flex-direction: column;
-    flex-wrap: wrap;
-    gap: 100px;
-  }
-  @include breakpoint("phone") {
-    flex-wrap: wrap;
-    gap: 100px;
-    flex-direction: column;
-  }
-
-  .section__beneftis-item {
+  .section__beneftis-container {
     display: flex;
-    align-items: center;
-    gap: 38px;
-    img {
-      width: 42.12px;
-      height: 42.12px;
+    flex-wrap: wrap;
+    @include breakpoint("tablet") {
+      justify-content: center;
     }
-    .section__beneftis-item-text {
+
+    .section__beneftis-item {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
-      p {
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 21px;
+      flex: 0 0 25%;
+      max-width: 25%;
+      justify-content: center;
+      align-items: center;
+      gap: 38px;
+      @include breakpoint("tablet") {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        // flex-grow: grow;
+      }
+      @include breakpoint("phone") {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+      }
+      img {
+        width: 42.12px;
+        height: 42.12px;
+      }
+      .section__beneftis-item-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        p {
+          font-weight: 900;
+          font-size: 18px;
+          line-height: 21px;
+          @include breakpoint("tablet") {
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
       }
     }
   }
@@ -308,21 +360,37 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-
+    @include breakpoint("tablet") {
+      gap: 10px;
+    }
     p {
       font-weight: 900;
       font-size: 20px;
       line-height: 23px;
       color: #000000;
       opacity: 0.5;
+      @include breakpoint("tablet") {
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 23px;
+      }
     }
   }
   .section__places-right {
     position: relative;
+    @include breakpoint("tablet") {
+      display: none;
+    }
+    @include breakpoint("phone") {
+      display: none;
+    }
     .next {
       position: absolute;
-      right: -18px;
-      top: 142px;
+      right: 0%;
+      top: 50%;
+      transform: translatey(-50%);
+
+      cursor: pointer;
     }
     .section__places-right-cards {
       display: flex;
@@ -374,6 +442,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 63px;
+    @include breakpoint("tablet") {
+      margin-bottom: 30px;
+    }
   }
   .section__toprated-cards {
     display: flex;
@@ -425,29 +496,41 @@
   display: flex;
   flex-direction: column;
   gap: 90px;
+  @include breakpoint("tablet") {
+    gap: 0;
+  }
   .h2 {
     display: flex;
     justify-content: center;
-    // margin-bottom: 90px;
+    @include breakpoint("tablet") {
+      margin-bottom: 30px;
+    }
   }
   .section__nearyou-items {
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap;
     @include breakpoint("tablet") {
-      flex-direction: column;
-      gap: 30px;
+      // flex-direction: column;
+      // gap: 30px;
     }
     @include breakpoint("phone") {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      // flex-wrap: wrap;
+      // justify-content: center;
+      // gap: 30px;
     }
     .section__nearyou-item {
       display: flex;
       align-items: center;
-      width: 316.72px;
+      justify-content: center;
       gap: 33px;
+      flex: 0 0 25%;
+      max-width: 25%;
+      @include breakpoint("tablet") {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 30px;
+      }
       .section__nearyou-item_imgbox {
         width: 117.93px;
         height: 76.63px;
@@ -512,6 +595,13 @@
       flex: 0 0 100%;
       max-width: 100%;
       margin-bottom: 30px;
+      order: 1;
+    }
+    @include breakpoint("phone") {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+      order: 1;
     }
     .latest-travel-left-col3 {
       flex: 0 0 33.33333%;
@@ -554,6 +644,10 @@
       flex: 0 0 100%;
       max-width: 100%;
     }
+    @include breakpoint("phone") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
     p {
       font-weight: 900;
       font-size: 20px;
@@ -561,6 +655,10 @@
       color: #000000;
       opacity: 0.5;
       margin-bottom: 30px;
+      @include breakpoint("tablet") {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -570,14 +668,16 @@
 .ourpartners {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+
   .ourpartners-heading-wrapper {
     display: flex;
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 63px;
     justify-content: center;
+    @include breakpoint("tablet") {
+      margin-bottom: 40px;
+    }
   }
 
   .ourpartners-4col {
@@ -591,6 +691,14 @@
       flex: 0 0 50%;
       max-width: 50%;
       margin-bottom: 20px;
+      justify-content: flex-start;
+    }
+    @include breakpoint("phone") {
+      display: flex;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+      justify-content: flex-start;
     }
     .ourpartners-4col-content {
       display: flex;
@@ -625,14 +733,30 @@
   .footer-container {
     display: flex;
     justify-content: center;
+    @include breakpoint("tablet") {
+      flex-wrap: wrap;
+    }
+    @include breakpoint("phone") {
+      flex-wrap: wrap;
+    }
     padding-top: 150px;
     padding-bottom: 150px;
     gap: 50px;
+    @include breakpoint("tablet") {
+      padding-top: 70px;
+    }
     .footer-col1 {
-      flex: 0 0 40%;
+      flex: 0 0 35%;
       max-width: 35%;
-      flex-wrap: wrap;
       padding-right: 30px;
+      @include breakpoint("tablet") {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      @include breakpoint("phone") {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
       .footer-logo {
         margin-bottom: 10px;
         h2 {
@@ -650,6 +774,9 @@
         line-height: 21px;
         color: #c6c6c6;
         padding-bottom: 15px;
+        @include breakpoint("tablet") {
+          font-size: 16px;
+        }
       }
       .footer-col1-social {
         .footer-col1-social-item {
@@ -664,6 +791,10 @@
       max-width: 21.666%;
       flex-wrap: wrap;
       // padding-left: 30px;
+      @include breakpoint("phone") {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
       .footer-col2-link {
         font-weight: 900;
         font-size: 24px;
@@ -682,6 +813,9 @@
             font-size: 18px;
             line-height: 21px;
             color: #c6c6c6;
+            @include breakpoint("tablet") {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -701,6 +835,9 @@
       line-height: 21px;
       color: #c6c6c6;
       margin-left: 10px;
+      @include breakpoint("tablet") {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -714,3 +851,8 @@
 //   position: absolute;
 //   right: 0;
 // }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

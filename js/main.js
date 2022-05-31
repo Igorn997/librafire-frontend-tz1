@@ -15,7 +15,7 @@ $(".center").slick({
         arrows: false,
         centerMode: true,
         centerPadding: "40px",
-        slidesToShow: 3,
+        slidesToShow: 2,
       },
     },
     {
@@ -29,3 +29,14 @@ $(".center").slick({
     },
   ],
 });
+
+const nav = document.querySelector(".header__main-nav_link");
+
+// const open = document.querySelectorAll(".nav-active");
+
+const openActive = function () {
+  nav.classList.add("nav-active");
+  console.log("clicked");
+};
+
+document.addEventListener("click", openActive);
